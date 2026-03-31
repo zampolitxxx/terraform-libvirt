@@ -1,0 +1,9 @@
+#cloud-config
+users:
+  - name: zampolit
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    shell: /bin/bash
+    passwd: "$6$z/XbnTo.uuH/P6TQ$nE.OVfOviNF6LhatK1agXtxlUUrf8lab3EX0BG8a9AiU1vCV8hIau5hC79BXVDZAC6XHHg26VO7IXjVmqfjZH1"
+    lock_passwd: false
+    ssh-authorized-keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH1GkvZzfyCm71+VYbTsBdCFZR/r04R/pN4YQ5O3LjnB zampolit@noutbook.zampolit.ru

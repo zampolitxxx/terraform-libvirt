@@ -7,3 +7,8 @@ users:
     lock_passwd: false
     ssh-authorized-keys:
       - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH1GkvZzfyCm71+VYbTsBdCFZR/r04R/pN4YQ5O3LjnB zampolit@noutbook.zampolit.ru
+
+# Команды для выполнения после загрузки
+runcmd:
+  - [ sh, -c, 'echo "Hello, world" > /home/zampolit/index.html' ]
+  - [ sh, -c, 'cd /home/zampolit && nohup busybox httpd -f -p 8080 &' ]
